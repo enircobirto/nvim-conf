@@ -1,7 +1,6 @@
 require("enirq.remap")
 require("enirq.set")
-print("hwjdskfh")
-
+require("after.plugin.tree")
 
 
 
