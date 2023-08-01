@@ -1,3 +1,5 @@
+vim = vim
+
 vim.g.mapleader = " "
 vim.keymap.set("n","<leader>t", vim.cmd.NvimTreeToggle)
 vim.keymap.set("n","<leader>py", vim.cmd.PackerSync)
@@ -12,10 +14,10 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 
-vim.keymap.set("n", "<leader>ff", "<cmd> Telescope find_files <CR>")
-vim.keymap.set("n", "<leader>fa", "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>")
-vim.keymap.set("n", "<leader>fw", "<cmd> Telescope live_grep <CR>")
-vim.keymap.set("n", "<leader>fb", "<cmd> Telescope buffers <CR>")
+--vim.keymap.set("n", "<leader>ff", "<cmd> Telescope find_files <CR>")
+--vim.keymap.set("n", "<leader>fa", "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>")
+--vim.keymap.set("n", "<leader>fw", "<cmd> Telescope live_grep <CR>")
+--vim.keymap.set("n", "<leader>fb", "<cmd> Telescope buffers <CR>")
 
 vim.keymap.set('n', '<A-,>', '<Cmd>BufferPrevious<CR>')
 vim.keymap.set('n', '<A-.>', '<Cmd>BufferNext<CR>')
@@ -34,3 +36,5 @@ vim.keymap.set('n', '<A-9>', '<Cmd>BufferGoto 9<CR>')
 vim.keymap.set('n', '<A-0>', '<Cmd>BufferLast<CR>')
 vim.keymap.set('n', '<A-p>', '<Cmd>BufferPin<CR>')
 vim.keymap.set('n', '<A-c>', '<Cmd>BufferClose<CR>')
+
+vim.keymap.set('n', '<leader>w', '<Cmd>w<CR>')
