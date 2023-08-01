@@ -3,6 +3,22 @@ if not status_ok then
     return
 end
 
+local mappings = {
+
+    ["k"] = { "<cmd>bdelete<CR>", "Kill Buffer" },  -- Close current file
+    ["q"] = { "<cmd>wqall!<CR>", "Quit" }, -- Quit Neovim after saving the file
+    ["w"] = { "<cmd>w!<CR>", "Save" }, -- Save current file
+
+    f = {
+        name = "file",
+        f = { "<cmd>Telescope find_files<cr>", "find file" },
+        w = { "<cmd>Telescope live_grep<cr>", "live grep" },
+        b = { "<cmd>Telescope buffers<cr>", "see buffers" },
+        a = { "<cmd>Telescope find_files follow=true no_ignore=true hidden=true <cr>", "find all files" },
+    },
+
+}
+
 local setup = {
     plugins = {
         marks = true, -- shows a list of your marks on ' and `
@@ -78,23 +94,6 @@ local opts = {
     nowait = true, -- use `nowait` when creating keymaps
 }
 
-local mappings = {
-
-    ["k"] = { "<cmd>bdelete<CR>", "Kill Buffer" },  -- Close current file
-    ["q"] = { "<cmd>wqall!<CR>", "Quit" }, -- Quit Neovim after saving the file
-    ["w"] = { "<cmd>w!<CR>", "Save" }, -- Save current file
-
-    f = {
-        name = "file",
-        f = { "<cmd>Telescope find_files<cr>", "find file" },
-        w = { "<cmd>Telescope live_grep<cr>", "live grep" },
-        b = { "<cmd>Telescope buffers<cr>", "see buffers" },
-        a = { "<cmd>Telescope find_files follow=true no_ignore=true hidden=true <cr>", "find all files" },
-    },
-
-
-
-}
 
 which_key.setup(setup)
 which_key.register(mappings, opts)
