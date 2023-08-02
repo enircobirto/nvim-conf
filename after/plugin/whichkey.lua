@@ -8,21 +8,33 @@ local leadermappings = {
     ["k"] = { "<cmd>bdelete<CR>", "Kill Buffer" },  -- Close current file
     ["q"] = { "<cmd>wqall!<CR>", "Quit" }, -- Quit Neovim after saving the file
     ["w"] = { "<cmd>w!<CR>", "Save" }, -- Save current file
+    ["s"] = { "<cmd>so<CR>", "Source" },
+    ["o"] = { "<cmd>SymbolsOutline<CR>", "Symbols Outline" },
 
     f = {
-        name = "file",
-        f = { "<cmd>Telescope find_files<cr>", "find file" },
-        w = { "<cmd>Telescope live_grep<cr>", "live grep" },
-        b = { "<cmd>Telescope buffers<cr>", "see buffers" },
-        a = { "<cmd>Telescope find_files follow=true no_ignore=true hidden=true <cr>", "find all files" },
+        name = "Files",
+        f = { "<cmd>Telescope find_files<cr>", "Find file" },
+        w = { "<cmd>Telescope live_grep<cr>", "Live grep" },
+        b = { "<cmd>Telescope buffers<cr>", "See buffers" },
+        a = { "<cmd>Telescope find_files follow=true no_ignore=true hidden=true <cr>", "Find all files" },
     },
 
 }
 
 local mappings = {
     g = {
+        name = "Navigation ('Go')",
         d = {"<cmd>Telescope lsp_definitions<CR>", "Go to definitions"},
-        i = {"<cmd>Telescope lsp_references<CR>", "Go to implementations"}
+        r = {"<cmd>Telescope lsp_references<CR>", "Go to references"},
+        i = {"<cmd>Telescope lsp_implementations<CR>", "Go to references"},
+    },
+    c = {
+        s = {"<cmd>Telescope colorscheme<CR>", "Change colorscheme"}
+    },
+    l = {
+        name = "LSP stuff",
+        r = {"<cmd>lua vim.lsp.buf.rename()<CR>", "Rename"},
+        f = {"<cmd>lua vim.lsp.buf.format()<CR>", "Rename"},
     }
 }
 
