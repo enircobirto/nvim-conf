@@ -198,6 +198,11 @@ _G.packer_plugins = {
     path = "/home/enrcbrt/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
   },
+  ["venv-selector.nvim"] = {
+    loaded = true,
+    path = "/home/enrcbrt/.local/share/nvim/site/pack/packer/start/venv-selector.nvim",
+    url = "https://github.com/linux-cultist/venv-selector.nvim"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/enrcbrt/.local/share/nvim/site/pack/packer/start/vim-fugitive",
