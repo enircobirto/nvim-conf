@@ -34,7 +34,7 @@ local mappings = {
     l = {
         name = "LSP stuff",
         r = {"<cmd>lua vim.lsp.buf.rename()<CR>", "Rename"},
-        f = {"<cmd>lua vim.lsp.buf.format()<CR>", "Rename"},
+        f = {"<cmd>lua vim.lsp.buf.format()<CR>", "Format"},
     }
 }
 

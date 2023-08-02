@@ -42,6 +42,5 @@ vim.keymap.set('n', '<A-p>', '<Cmd>BufferPin<CR>')
 vim.keymap.set('n', '<A-c>', '<Cmd>BufferClose<CR>')
 
 vim.keymap.set('n', '<leader>w', '<Cmd>w<CR>')
-vim.keymap.set('i', 'jq', '<Escape>l')
+vim.keymap.set('i', 'iq', '<Escape>l')
 
-vim.keymap.set('n', '<leader>rw', ':IncRename ')
