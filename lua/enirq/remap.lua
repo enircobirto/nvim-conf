@@ -48,3 +48,12 @@ vim.keymap.set('i', 'iq', '<Escape>l')
 vim.api.nvim_set_keymap('', 'f', "<cmd>lua require'hop'.hint_char1()<cr>", {})
 
 vim.keymap.set("n", "-", require("oil").open, { desc = "Open parent directory" })
+
+local opts={buffer=0}
+vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], opts)
+vim.keymap.set('t', 'jk', [[<C-\><C-n>]], opts)
+vim.keymap.set('t', '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
+vim.keymap.set('t', '<C-j>', [[<Cmd>wincmd j<CR>]], opts)
+vim.keymap.set('t', '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
+vim.keymap.set('t', '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
+vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]], opts)
