@@ -47,7 +47,7 @@ vim.keymap.set('i', 'iq', '<Escape>l')
 
 vim.api.nvim_set_keymap('', 'f', "<cmd>lua require'hop'.hint_char1()<cr>", {})
 
-vim.keymap.set("n", "-", require("oil").open, { desc = "Open parent directory" })
+vim.keymap.set("n", "-", "<cmd>Oil <CR><cmd>set modifiable<CR>", { desc = "Open parent directory" })
 
 local opts={buffer=0}
 vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], opts)
