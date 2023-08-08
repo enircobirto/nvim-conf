@@ -93,4 +93,6 @@ return require('packer').startup(function(use)
     use {"akinsho/toggleterm.nvim", tag = '*', config = function()
         require("toggleterm").setup()
     end}
+    use {'rhysd/vim-color-spring-night'}
+    use {'vim-scripts/seoul256.vim'}
 end)
