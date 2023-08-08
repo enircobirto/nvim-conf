@@ -6,7 +6,7 @@ end
 local leadermappings = {
 
     ["k"] = { "<cmd>bdelete<CR>", "Kill Buffer" },  -- Close current file
-    ["q"] = { "<cmd>wqall!<CR>", "Quit" }, -- Quit Neovim after saving the file
+    ["q"] = { "<cmd>q<CR>", "Quit" }, -- Quit Neovim after saving the file
     ["w"] = { "<cmd>w!<CR>", "Save" }, -- Save current file
     ["s"] = { "<cmd>so<CR>", "Source" },
     ["o"] = { "<cmd>SymbolsOutline<CR>", "Symbols Outline" },
