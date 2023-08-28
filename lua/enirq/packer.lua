@@ -32,7 +32,6 @@ return require('packer').startup(function(use)
                 end,
             },
             { 'williamboman/mason-lspconfig.nvim' }, -- Optional
-
             -- Autocompaletion
             { 'hrsh7th/nvim-cmp' }, -- Required
             { 'hrsh7th/cmp-nvim-lsp' }, -- Required
@@ -95,4 +94,5 @@ return require('packer').startup(function(use)
     end}
     use {'rhysd/vim-color-spring-night'}
     use {'vim-scripts/seoul256.vim'}
+    use {'mattn/invader-vim'}
 end)
