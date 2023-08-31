@@ -43,10 +43,7 @@ vim.keymap.set('n', '<A-c>', '<Cmd>BufferClose<CR>')
 vim.keymap.set('n', '<A-t>', '<Cmd>BufferRestore<CR>')
 
 vim.keymap.set('n', '<leader>w', '<Cmd>w<CR>')
-vim.keymap.set('i', '.,w', '<Escape><Cmd>w<CR>l')
-vim.keymap.set('i', '.,q', '<Escape>l')
-
-vim.api.nvim_set_keymap('', 'f', "<cmd>lua require'hop'.hint_char1()<cr>", {})
+vim.keymap.set('i', 'poi', '<Escape><Cmd>w<CR>l')
 
 vim.keymap.set("n", "-", "<cmd>Oil <CR><cmd>set modifiable<cr>", {})
 vim.keymap.set("n", "<leader>-", "<cmd>set modifiable<CR>", {})

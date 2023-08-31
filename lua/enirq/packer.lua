@@ -53,14 +53,6 @@ return require('packer').startup(function(use)
     use('mhartington/formatter.nvim')
     use('mg979/vim-visual-multi')
     use('folke/which-key.nvim')
-    use {
-        'phaazon/hop.nvim',
-        branch = 'v2', -- optional but strongly recommended
-        config = function()
-            -- you can configure Hop the way you like here; see :h hop-config
-            require 'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
-        end
-    }
     use { 'stevearc/dressing.nvim' }
     use {
         'simrat39/symbols-outline.nvim',
@@ -95,4 +87,5 @@ return require('packer').startup(function(use)
     use {'rhysd/vim-color-spring-night'}
     use {'vim-scripts/seoul256.vim'}
     use {'mattn/invader-vim'}
+    use {'easymotion/vim-easymotion'}
 end)
