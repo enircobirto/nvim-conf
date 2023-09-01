@@ -5,6 +5,7 @@ end
 
 local leadermappings = {
 
+    e = { "<CMD>lua vim.diagnostic.open_float(0, {scope='line'})<CR>", "Show diagnostics" },
     ["k"] = { "<CMD>bdelete<CR>", "Kill Buffer" },  -- Close current file
     ["q"] = { "<CMD>q<CR>", "Quit" }, -- Quit Neovim after saving the file
     ["w"] = { "<CMD>w!<CR>", "Save" }, -- Save current file
@@ -28,6 +29,10 @@ local leadermappings = {
         t = {"<CMD>lua require'dap-python'.setup(vim.fn.exepath('python'))<CR>", "Setup to current python venv"},
         c = {"<CMD>lua require('dapui').float_element('console')<CR>", "Float DAP Console"},
     },
+    ['1'] = {"<CMD>ToggleTerm 1<CR>","Toggle terminal 1"},
+    ['2'] = {"<CMD>ToggleTerm 2<CR>","Toggle terminal 2"},
+    ['3'] = {"<CMD>ToggleTerm 3<CR>","Toggle terminal 3"},
+    ['4'] = {"<CMD>ToggleTerm 4<CR>","Toggle terminal 4"},
 }
 
 local mappings = {
@@ -49,10 +54,6 @@ local mappings = {
 
 local ctrlTmappings = {
     s = {"<CMD>TermSelect<CR>","Select active terminal"},
-    q = {"<CMD>ToggleTerm 1<CR>","Toggle terminal 1"},
-    w = {"<CMD>ToggleTerm 2<CR>","Toggle terminal 2"},
-    e = {"<CMD>ToggleTerm 3<CR>","Toggle terminal 3"},
-    r = {"<CMD>ToggleTerm 4<CR>","Toggle terminal 4"},
 }
 
 local setup = {

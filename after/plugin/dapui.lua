@@ -1,3 +1,4 @@
+require('dap-python').setup(vim.fn.exepath('python'))
 require('dapui').setup({
     layouts = { {
         elements = {
