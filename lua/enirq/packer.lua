@@ -88,4 +88,7 @@ return require('packer').startup(function(use)
     use {'vim-scripts/seoul256.vim'}
     use {'mattn/invader-vim'}
     use {'easymotion/vim-easymotion'}
+    use {'mfussenegger/nvim-dap'}
+    use {'mfussenegger/nvim-dap-python'}
+    use { "rcarriga/nvim-dap-ui"}
 end)

@@ -5,36 +5,45 @@ end
 
 local leadermappings = {
 
-    ["k"] = { "<cmd>bdelete<CR>", "Kill Buffer" },  -- Close current file
-    ["q"] = { "<cmd>q<CR>", "Quit" }, -- Quit Neovim after saving the file
-    ["w"] = { "<cmd>w!<CR>", "Save" }, -- Save current file
-    ["s"] = { "<cmd>so<CR>", "Source" },
-    ["o"] = { "<cmd>SymbolsOutline<CR>", "Symbols Outline" },
+    ["k"] = { "<CMD>bdelete<CR>", "Kill Buffer" },  -- Close current file
+    ["q"] = { "<CMD>q<CR>", "Quit" }, -- Quit Neovim after saving the file
+    ["w"] = { "<CMD>w!<CR>", "Save" }, -- Save current file
+    ["s"] = { "<CMD>so<CR>", "Source" },
+    ["o"] = { "<CMD>SymbolsOutline<CR>", "Symbols Outline" },
 
     f = {
         name = "Files",
-        f = { "<cmd>Telescope find_files<cr>", "Find file" },
-        w = { "<cmd>Telescope live_grep<cr>", "Live grep" },
-        b = { "<cmd>Telescope buffers<cr>", "See buffers" },
-        a = { "<cmd>Telescope find_files follow=true no_ignore=true hidden=true <cr>", "Find all files" },
+        f = { "<CMD>Telescope find_files<cr>", "Find file" },
+        w = { "<CMD>Telescope live_grep<cr>", "Live grep" },
+        b = { "<CMD>Telescope buffers<cr>", "See buffers" },
+        a = { "<CMD>Telescope find_files follow=true no_ignore=true hidden=true <cr>", "Find all files" },
     },
 
+    d = {
+        name = "Debugger",
+        b = {"<CMD>lua require'dap'.toggle_breakpoint()<CR>", "Toggle Breakpoint"},
+        d = {"<CMD>lua require'dap'.continue()<CR>", "Debug/Continue"},
+        s = {"<CMD>lua require'dap'.step_over()<CR>", "Step Over"},
+        o = {"<CMD>lua require'dapui'.toggle()<CR>", "Open DAP UI"},
+        t = {"<CMD>lua require'dap-python'.setup(vim.fn.exepath('python'))<CR>", "Setup to current python venv"},
+        c = {"<CMD>lua require('dapui').float_element('console')<CR>", "Float DAP Console"},
+    },
 }
 
 local mappings = {
     g = {
         name = "Navigation ('Go')",
-        d = {"<cmd>Telescope lsp_definitions<CR>", "Go to definitions"},
-        r = {"<cmd>Telescope lsp_references<CR>", "Go to references"},
-        i = {"<cmd>Telescope lsp_implementations<CR>", "Go to references"},
+        d = {"<CMD>Telescope lsp_definitions<CR>", "Go to definitions"},
+        r = {"<CMD>Telescope lsp_references<CR>", "Go to references"},
+        i = {"<CMD>Telescope lsp_implementations<CR>", "Go to references"},
     },
     c = {
-        s = {"<cmd>Telescope colorscheme<CR>", "Change colorscheme"}
+        s = {"<CMD>Telescope colorscheme<CR>", "Change colorscheme"}
     },
     l = {
         name = "LSP stuff",
-        r = {"<cmd>lua vim.lsp.buf.rename()<CR>", "Rename"},
-        f = {"<cmd>lua vim.lsp.buf.format()<CR>", "Format"},
+        r = {"<CMD>lua vim.lsp.buf.rename()<CR>", "Rename"},
+        f = {"<CMD>lua vim.lsp.buf.format()<CR>", "Format"},
     }
 }
 
@@ -91,7 +100,7 @@ local setup = {
         align = "left", -- align columns left, center or right
     },
     ignore_missing = true, -- enable this to hide mappings for which you didn't specify a label
-    hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ " }, -- hide mapping boilerplate
+    hidden = { "<silent>", "<CMD>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ " }, -- hide mapping boilerplate
     show_help = true, -- show help message on the command line when the popup is visible
     triggers = "auto", -- automatically setup triggers
     -- triggers = {"<leader>"} -- or specify a list manually
