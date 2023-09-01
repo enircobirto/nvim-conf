@@ -47,6 +47,14 @@ local mappings = {
     }
 }
 
+local ctrlTmappings = {
+    s = {"<CMD>TermSelect<CR>","Select active terminal"},
+    q = {"<CMD>ToggleTerm 1<CR>","Toggle terminal 1"},
+    w = {"<CMD>ToggleTerm 2<CR>","Toggle terminal 2"},
+    e = {"<CMD>ToggleTerm 3<CR>","Toggle terminal 3"},
+    r = {"<CMD>ToggleTerm 4<CR>","Toggle terminal 4"},
+}
+
 local setup = {
     plugins = {
         marks = true, -- shows a list of your marks on ' and `
@@ -113,6 +121,14 @@ local setup = {
     },
 }
 
+local ctrlopts = {
+    mode = "n", -- NORMAL mode
+    prefix = "<C-T>",
+    buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+    silent = true, -- use `silent` when creating keymaps
+    noremap = true, -- use `noremap` when creating keymaps
+    nowait = true, -- use `nowait` when creating keymaps
+}
 local leaderopts = {
     mode = "n", -- NORMAL mode
     prefix = "<leader>",
@@ -132,5 +148,6 @@ local opts = {
 
 
 which_key.setup(setup)
+which_key.register(ctrlTmappings, ctrlopts)
 which_key.register(leadermappings, leaderopts)
 which_key.register(mappings, opts)

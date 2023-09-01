@@ -90,5 +90,6 @@ return require('packer').startup(function(use)
     use {'easymotion/vim-easymotion'}
     use {'mfussenegger/nvim-dap'}
     use {'mfussenegger/nvim-dap-python'}
-    use { "rcarriga/nvim-dap-ui"}
+    -- use {"rcarriga/nvim-dap-ui"}
+    use {'enircobirto/dapui-data'}
 end)
