@@ -92,4 +92,5 @@ return require('packer').startup(function(use)
     use {'mfussenegger/nvim-dap-python'}
     -- use {"rcarriga/nvim-dap-ui"}
     use {'enircobirto/dapui-data'}
+    use {'wfxr/minimap.vim'}
 end)

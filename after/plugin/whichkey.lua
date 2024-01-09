@@ -8,9 +8,11 @@ local leadermappings = {
     e = { "<CMD>lua vim.diagnostic.open_float(0, {scope='line'})<CR>", "Show diagnostics" },
     ["k"] = { "<CMD>bdelete<CR>", "Kill Buffer" }, -- Close current file
     ["q"] = { "<CMD>q<CR>", "Quit" },              -- Quit Neovim after saving the file
+    ["Q"] = { "<CMD>qa!<CR>", "Source" },
     ["w"] = { "<CMD>w!<CR>", "Save" },             -- Save current file
     ["s"] = { "<CMD>so<CR>", "Source" },
     ["o"] = { "<CMD>SymbolsOutline<CR>", "Symbols Outline" },
+    ["m"] = { "<CMD>MinimapToggle<CR>", "MinimapToggle" },
 
     f = {
         name = "Files",

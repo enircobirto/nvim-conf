@@ -20,4 +20,6 @@ cmp.setup({mapping = smp_mappings})
 
 lsp.set_preferences({sign_icons = {'aaa'}})
 
+require('lspconfig').pyright.setup({})
+
 lsp.setup()
