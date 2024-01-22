@@ -29,7 +29,7 @@ local leadermappings = {
         s = { "<CMD>lua require'dap'.step_over()<CR>", "Step Over" },
         o = { "<CMD>lua require'dapui'.toggle()<CR>", "Open DAP UI" },
         t = { "<CMD>lua require'dap-python'.setup(vim.fn.exepath('python'))<CR>", "Setup to current python venv" },
-        c = { "<CMD>lua require('dapui').float_element('console')<CR>", "Float DAP Console" },
+        c = { "<CMD>lua require('dapui').float_element('console',{width=160,height=30,position='center'})<CR>", "Float DAP Console" },
     },
     l = {
         name = "LSP stuff",

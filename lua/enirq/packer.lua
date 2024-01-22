@@ -105,4 +105,5 @@ return require('packer').startup(function(use)
         vim.keymap.set({ "n", "v" }, '<leader>xe', require('nvim-emmet').wrap_with_abbreviation)
       end,
     }
+    use {'barrett-ruth/live-server.nvim'}
 end)

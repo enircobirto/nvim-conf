@@ -1,5 +1,11 @@
 require('dap-python').setup(vim.fn.exepath('python'))
 require('dapui').setup({
+    floating = {
+      border = "shadow",
+      mappings = {
+        close = { "q", "<Esc>" }
+      },
+    },
     layouts = { {
         elements = {
           {
