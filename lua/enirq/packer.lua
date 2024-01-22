@@ -8,7 +8,7 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.1',
+        'nvim-telescope/telescope.nvim', tag = '0.1.4',
         -- or                            , branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
@@ -93,4 +93,16 @@ return require('packer').startup(function(use)
     -- use {"rcarriga/nvim-dap-ui"}
     use {'enircobirto/dapui-data'}
     use {'wfxr/minimap.vim'}
+    use {'nvim-lua/plenary.nvim'}
+    use {'Shatur/neovim-session-manager'}
+    use {'posva/vim-vue'}
+    use {
+      'nmac427/guess-indent.nvim',
+      config = function() require('guess-indent').setup {} end,
+    }
+    use {"olrtg/nvim-emmet",
+      config = function()
+        vim.keymap.set({ "n", "v" }, '<leader>xe', require('nvim-emmet').wrap_with_abbreviation)
+      end,
+    }
 end)
