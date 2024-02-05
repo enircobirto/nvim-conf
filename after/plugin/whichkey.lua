@@ -8,11 +8,11 @@ local leadermappings = {
     e = { "<CMD>lua vim.diagnostic.open_float(0, {scope='line'})<CR>", "Show diagnostics" },
     ["k"] = { "<CMD>bdelete<CR>", "Kill Buffer" }, -- Close current file
     ["q"] = { "<CMD>q<CR>", "Quit" },              -- Quit Neovim after saving the file
-    ["Q"] = { "<CMD>qa!<CR>", "Source" },
     ["w"] = { "<CMD>w!<CR>", "Save" },             -- Save current file
     ["s"] = { "<CMD>so<CR>", "Source" },
     ["o"] = { "<CMD>SymbolsOutline<CR>", "Symbols Outline" },
     ["m"] = { "<CMD>MinimapToggle<CR>", "MinimapToggle" },
+    ["u"] = { "<CMD>UndotreeToggle<CR><CMD>NvimTreeToggle<CR>", "UndotreeToggle" },
 
     f = {
         name = "Files",
@@ -26,7 +26,11 @@ local leadermappings = {
         name = "Debugger",
         b = { "<CMD>lua require'dap'.toggle_breakpoint()<CR>", "Toggle Breakpoint" },
         d = { "<CMD>lua require'dap'.continue()<CR>", "Debug/Continue" },
-        s = { "<CMD>lua require'dap'.step_over()<CR>", "Step Over" },
+        s = {
+            v = { "<CMD>lua require'dap'.step_over()<CR>", "Step Over" },
+            i = { "<CMD>lua require'dap'.step_into()<CR>", "Step Into" },
+            o = { "<CMD>lua require'dap'.step_out()<CR>", "Step Out" },
+        },
         o = { "<CMD>lua require'dapui'.toggle()<CR>", "Open DAP UI" },
         t = { "<CMD>lua require'dap-python'.setup(vim.fn.exepath('python'))<CR>", "Setup to current python venv" },
         c = { "<CMD>lua require('dapui').float_element('console',{width=160,height=30,position='center'})<CR>", "Float DAP Console" },
@@ -52,6 +56,12 @@ local mappings = {
     c = {
         s = { "<CMD>Telescope colorscheme<CR>", "Change colorscheme" }
     },
+    Q = {
+        ["Q"] = { "<CMD>qa <CR>", "Quit ALL *" },
+        ["W"] = { "<CMD>wqa <CR>", "Quit ALL *" },
+        ["A"] = { "<CMD>qa!<CR>", "Quit ALL !" },
+
+    }
 }
 
 local ctrlTmappings = {

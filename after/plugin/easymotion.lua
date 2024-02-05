@@ -1,1 +1,1 @@
-vim.cmd("let g:EasyMotion_keys = '0123456789'")
+vim.cmd("let g:EasyMotion_keys = '1234567890qwertyuiop'")
