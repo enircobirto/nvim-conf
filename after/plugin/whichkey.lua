@@ -10,8 +10,9 @@ local leadermappings = {
     ["q"] = { "<CMD>q<CR>", "Quit" },              -- Quit Neovim after saving the file
     ["w"] = { "<CMD>w!<CR>", "Save" },             -- Save current file
     ["s"] = { "<CMD>so<CR>", "Source" },
-    ["o"] = { "<CMD>SymbolsOutline<CR>", "Symbols Outline" },
+    ["o"] = { "<CMD>SymbolsOutline<CR>", "Symbols Outline"},
     ["m"] = { "<CMD>MinimapToggle<CR>", "MinimapToggle" },
+    ["n"] = { "<CMD>noh<CR>", "No Highlight" },
     ["u"] = { "<CMD>UndotreeToggle<CR><CMD>NvimTreeToggle<CR>", "UndotreeToggle" },
 
     f = {
@@ -40,10 +41,13 @@ local leadermappings = {
         r = { "<CMD>lua vim.lsp.buf.rename()<CR>", "Rename" },
         f = { "<CMD>lua vim.lsp.buf.format()<CR>", "Format" },
     },
-    ['1'] = { "<CMD>ToggleTerm 1<CR>", "Toggle terminal 1" },
-    ['2'] = { "<CMD>ToggleTerm 2<CR>", "Toggle terminal 2" },
-    ['3'] = { "<CMD>ToggleTerm 3<CR>", "Toggle terminal 3" },
-    ['4'] = { "<CMD>ToggleTerm 4<CR>", "Toggle terminal 4" },
+    ['<leader>'] = {
+        name = "Toggle Terminals",
+        ['1'] = { "<CMD>ToggleTerm 1<CR>", "Toggle terminal 1" },
+        ['2'] = { "<CMD>ToggleTerm 2<CR>", "Toggle terminal 2" },
+        ['3'] = { "<CMD>ToggleTerm 3<CR>", "Toggle terminal 3" },
+        ['4'] = { "<CMD>ToggleTerm 4<CR>", "Toggle terminal 4" },
+    }
 }
 
 local mappings = {
@@ -58,7 +62,7 @@ local mappings = {
     },
     Q = {
         ["Q"] = { "<CMD>qa <CR>", "Quit ALL *" },
-        ["W"] = { "<CMD>wqa <CR>", "Quit ALL *" },
+        ["W"] = { "<CMD>wqa <CR>", "Save + Quit ALL" },
         ["A"] = { "<CMD>qa!<CR>", "Quit ALL !" },
 
     }

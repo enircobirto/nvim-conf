@@ -95,7 +95,6 @@ return require('packer').startup(function(use)
     use {'wfxr/minimap.vim'}
     use {'nvim-lua/plenary.nvim'}
     use {'Shatur/neovim-session-manager'}
-    use {'posva/vim-vue'}
     use {
       'nmac427/guess-indent.nvim',
       config = function() require('guess-indent').setup {} end,
@@ -106,4 +105,7 @@ return require('packer').startup(function(use)
       end,
     }
     use {'barrett-ruth/live-server.nvim'}
+    use('neovim/nvim-lspconfig')
+        use('jose-elias-alvarez/null-ls.nvim')
+    use('MunifTanjim/prettier.nvim')
 end)

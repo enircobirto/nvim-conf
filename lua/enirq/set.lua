@@ -38,3 +38,5 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 vim.cmd("let g:python3_host_prog = '/usr/bin/python3.11'")
 
 vim.cmd("set nowrap")
+
+vim.cmd("set invlist")
