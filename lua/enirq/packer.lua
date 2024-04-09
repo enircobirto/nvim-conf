@@ -14,11 +14,11 @@ return require('packer').startup(function(use)
     }
 
     use { "catppuccin/nvim", as = "catppuccin" }
-    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
-    use('nvim-treesitter/playground')
-    use('theprimeagen/harpoon')
-    use('mbbill/undotree')
-    use('tpope/vim-fugitive')
+    use{'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' }}
+    use{'nvim-treesitter/playground'}
+    use{'theprimeagen/harpoon'}
+    use{'mbbill/undotree'}
+    use{'tpope/vim-fugitive'}
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
@@ -47,12 +47,12 @@ return require('packer').startup(function(use)
             require("nvim-tree").setup {}
         end
     }
-    use('nvim-tree/nvim-web-devicons') -- OPTIONAL: for file icons
-    use('lewis6991/gitsigns.nvim')    -- OPTIONAL: for git status
-    use('romgrk/barbar.nvim')
-    use('mhartington/formatter.nvim')
-    use('mg979/vim-visual-multi')
-    use('folke/which-key.nvim')
+    use{'nvim-tree/nvim-web-devicons'} -- OPTIONAL: for file icons
+    use{'lewis6991/gitsigns.nvim'}    -- OPTIONAL: for git status
+    use{'romgrk/barbar.nvim'}
+    use{'mhartington/formatter.nvim'}
+    use{'mg979/vim-visual-multi'}
+    use{'folke/which-key.nvim'}
     use { 'stevearc/dressing.nvim' }
     use {
         'simrat39/symbols-outline.nvim',
@@ -73,14 +73,14 @@ return require('packer').startup(function(use)
             })
         end
     })
-    use('linux-cultist/venv-selector.nvim')
+    use{'linux-cultist/venv-selector.nvim'}
     use {
         'stevearc/oil.nvim',
         config = function() require('oil').setup({default_file_explorer = false}) end
     }
-    use('enircobirto/vim-accent-portuguese')
-    use('ray-x/starry.nvim')
-    use('ThePrimeagen/vim-be-good')
+    use{'enircobirto/vim-accent-portuguese'}
+    use{'ray-x/starry.nvim'}
+    use{'ThePrimeagen/vim-be-good'}
     use {"akinsho/toggleterm.nvim", tag = '*', config = function()
         require("toggleterm").setup()
     end}
@@ -105,7 +105,8 @@ return require('packer').startup(function(use)
       end,
     }
     use {'barrett-ruth/live-server.nvim'}
-    use('neovim/nvim-lspconfig')
-        use('jose-elias-alvarez/null-ls.nvim')
-    use('MunifTanjim/prettier.nvim')
+    use {'neovim/nvim-lspconfig'}
+    use {'jose-elias-alvarez/null-ls.nvim'}
+    use {'MunifTanjim/prettier.nvim'}
+    use {'tpope/vim-commentary'}
 end)

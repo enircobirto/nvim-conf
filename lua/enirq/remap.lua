@@ -41,6 +41,10 @@ vim.keymap.set('n', '<A-0>', '<Cmd>BufferLast<CR>')
 vim.keymap.set('n', '<A-p>', '<Cmd>BufferPin<CR>')
 vim.keymap.set('n', '<A-c>', '<Cmd>BufferClose<CR>')
 vim.keymap.set('n', '<A-t>', '<Cmd>BufferRestore<CR>')
+vim.keymap.set('n', '<A-f>', '<Cmd>BufferPick<CR>')
+vim.keymap.set('n', '<A-q>', '<Cmd>BufferWipeout<CR>')
+vim.keymap.set('n', '<A-k>', '<Cmd>BufferCloseAllButCurrentOrPinned<CR>')
+vim.keymap.set('n', '<A-o>', '<Cmd>BufferOrderByDirectory<CR>')
 
 vim.keymap.set('n', '<leader>w', '<Cmd>w<CR>')
 vim.keymap.set('i', 'poi', '<Escape><Cmd>w<CR>l')
@@ -64,5 +68,6 @@ vim.keymap.set('t', '<leader><leader>q', '<CMD>ToggleTerm<CR>')
 vim.keymap.set("n", "'", "`")
 vim.keymap.set("n", "vip", "{jV}")
 
-
 vim.keymap.set('n', '<leader><leader>q', '<CMD>ToggleTerm<CR>')
+
+vim.keymap.set('x', '<leader>c', ':Commentary<CR>')
