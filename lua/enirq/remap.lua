@@ -59,10 +59,10 @@ vim.keymap.set('t', '<C-j>', [[<Cmd>wincmd j<CR>]])
 vim.keymap.set('t', '<C-k>', [[<Cmd>wincmd k<CR>]])
 vim.keymap.set('t', '<C-l>', [[<Cmd>wincmd l<CR>]])
 vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]])
-vim.keymap.set('t', '<leader><leader>1', '<CMD>ToggleTerm 1<CR>')
-vim.keymap.set('t', '<leader><leader>2', '<CMD>ToggleTerm 2<CR>')
-vim.keymap.set('t', '<leader><leader>3', '<CMD>ToggleTerm 3<CR>')
-vim.keymap.set('t', '<leader><leader>4', '<CMD>ToggleTerm 4<CR>')
+vim.keymap.set('t', '<F1>', '<CMD>ToggleTerm 1<CR>')
+vim.keymap.set('t', '<F2>', '<CMD>ToggleTerm 2<CR>')
+vim.keymap.set('t', '<F3>', '<CMD>ToggleTerm 3<CR>')
+vim.keymap.set('t', '<F4>', '<CMD>ToggleTerm 4<CR>')
 vim.keymap.set('t', '<leader><leader>q', '<CMD>ToggleTerm<CR>')
 
 vim.keymap.set("n", "'", "`")
@@ -71,3 +71,20 @@ vim.keymap.set("n", "vip", "{jV}")
 vim.keymap.set('n', '<leader><leader>q', '<CMD>ToggleTerm<CR>')
 
 vim.keymap.set('x', '<leader>c', ':Commentary<CR>')
+
+-- Debugger
+vim.keymap.set('n','<leader>do','<CMD>NvimTreeClose<CR><CMD>lua require"dapui".toggle()<CR>')
+vim.keymap.set('n','<F5>','<CMD>lua require"dap".continue()<CR>')
+vim.keymap.set('n','<F29>','<CMD>lua require"dap".restart()<CR>')
+vim.keymap.set('n','<F8>','<CMD>lua require"dap".toggle_breakpoint()<CR>')
+vim.keymap.set('n','<F32>','<CMD>lua require("dapui").float_element("console",{width=160,height=30,position="center"})<CR>')
+vim.keymap.set('n','<F6>','<CMD>lua require"dap".step_over()<CR>')
+vim.keymap.set('n','<F7>','<CMD>lua require"dap".step_into()<CR>')
+vim.keymap.set('n','<F31>','<CMD>lua require"dap".step_out()<CR>')
+
+
+-- Toggle term
+vim.keymap.set('n','<F1>','<CMD>ToggleTerm 1<CR>')
+vim.keymap.set('n','<F2>','<CMD>ToggleTerm 2<CR>')
+vim.keymap.set('n','<F3>','<CMD>ToggleTerm 3<CR>')
+vim.keymap.set('n','<F4>','<CMD>ToggleTerm 4<CR>')

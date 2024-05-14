@@ -23,18 +23,15 @@ local leadermappings = {
         a = { "<CMD>Telescope find_files follow=true no_ignore=true hidden=true <cr>", "Find all files" },
     },
 
-    d = {
-        name = "Debugger",
-        b = { "<CMD>lua require'dap'.toggle_breakpoint()<CR>", "Toggle Breakpoint" },
-        d = { "<CMD>lua require'dap'.continue()<CR>", "Debug/Continue" },
-        o = { "<CMD>lua require'dapui'.toggle()<CR>", "Open DAP UI" },
-        t = { "<CMD>lua require'dap-python'.setup(vim.fn.exepath('python'))<CR>", "Setup to current python venv" },
-        c = { "<CMD>lua require('dapui').float_element('console',{width=160,height=30,position='center'})<CR>", "Float DAP Console" },
-    },
+    -- d = {
+    --     name = "Debugger",
+    --     b = { "<CMD>lua require'dap'.toggle_breakpoint()<CR>", "Toggle Breakpoint" },
+    --     d = { "<CMD>lua require'dap'.continue()<CR>", "Debug/Continue" },
+    --     o = { "<CMD>lua require'dapui'.toggle()<CR>", "Open DAP UI" },
+    --     t = { "<CMD>lua require'dap-python'.setup(vim.fn.exepath('python'))<CR>", "Setup to current python venv" },
+    --     c = { "<CMD>lua require('dapui').float_element('console',{width=160,height=30,position='center'})<CR>", "Float DAP Console" },
+    -- },
     s = {
-        v = { "<CMD>lua require'dap'.step_over()<CR>", "Step Over" },
-        i = { "<CMD>lua require'dap'.step_into()<CR>", "Step Into" },
-        o = { "<CMD>lua require'dap'.step_out()<CR>", "Step Out" },
         s = { "<CMD>so<CR>", "Source" }
     },
     l = {
@@ -42,13 +39,6 @@ local leadermappings = {
         r = { "<CMD>lua vim.lsp.buf.rename()<CR>", "Rename" },
         f = { "<CMD>lua vim.lsp.buf.format()<CR>", "Format" },
     },
-    ['<leader>'] = {
-        name = "Toggle Terminals",
-        ['1'] = { "<CMD>ToggleTerm 1<CR>", "Toggle terminal 1" },
-        ['2'] = { "<CMD>ToggleTerm 2<CR>", "Toggle terminal 2" },
-        ['3'] = { "<CMD>ToggleTerm 3<CR>", "Toggle terminal 3" },
-        ['4'] = { "<CMD>ToggleTerm 4<CR>", "Toggle terminal 4" },
-    }
 }
 
 local mappings = {
@@ -67,10 +57,6 @@ local mappings = {
         ["A"] = { "<CMD>qa!<CR>", "Quit ALL !" },
 
     }
-}
-
-local ctrlTmappings = {
-    s = { "<CMD>TermSelect<CR>", "Select active terminal" },
 }
 
 local setup = {
@@ -139,14 +125,6 @@ local setup = {
     },
 }
 
-local ctrlopts = {
-    mode = "n",     -- NORMAL mode
-    prefix = "<C-T>",
-    buffer = nil,   -- Global mappings. Specify a buffer number for buffer local mappings
-    silent = true,  -- use `silent` when creating keymaps
-    noremap = true, -- use `noremap` when creating keymaps
-    nowait = true,  -- use `nowait` when creating keymaps
-}
 local leaderopts = {
     mode = "n",     -- NORMAL mode
     prefix = "<leader>",
@@ -165,6 +143,5 @@ local opts = {
 }
 
 which_key.setup(setup)
-which_key.register(ctrlTmappings, ctrlopts)
 which_key.register(leadermappings, leaderopts)
 which_key.register(mappings, opts)
