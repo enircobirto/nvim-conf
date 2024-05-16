@@ -31,9 +31,7 @@ local leadermappings = {
     --     t = { "<CMD>lua require'dap-python'.setup(vim.fn.exepath('python'))<CR>", "Setup to current python venv" },
     --     c = { "<CMD>lua require('dapui').float_element('console',{width=160,height=30,position='center'})<CR>", "Float DAP Console" },
     -- },
-    s = {
-        s = { "<CMD>so<CR>", "Source" }
-    },
+    s = { "<CMD>so<CR>", "Source" },
     l = {
         name = "LSP stuff",
         r = { "<CMD>lua vim.lsp.buf.rename()<CR>", "Rename" },
