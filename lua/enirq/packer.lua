@@ -116,5 +116,5 @@ return require('packer').startup(function(use)
     use {'seandewar/killersheep.nvim'}
     use {'rktjmp/playtime.nvim'}
     use {'Eandrju/cellular-automaton.nvim'}
-    use { 'jim-fx/sudoku.nvim',cmd="Sudoku" }
+    use {'jim-fx/sudoku.nvim',cmd="Sudoku"}
 end)

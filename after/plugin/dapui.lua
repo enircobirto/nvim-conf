@@ -3,7 +3,7 @@ require('dapui').setup({
     floating = {
       border = "shadow",
       mappings = {
-        close = { "<F9>", "<Esc>" }
+        close = { "<F9>", "q" }
       },
     },
     layouts = { {

@@ -80,6 +80,7 @@ vim.keymap.set('n','<F9>','<CMD>lua require("dapui").float_element("console",{wi
 vim.keymap.set('n','<F6>','<CMD>lua require"dap".step_over()<CR>')
 vim.keymap.set('n','<F7>','<CMD>lua require"dap".step_into()<CR>')
 vim.keymap.set('n','<F31>','<CMD>lua require"dap".step_out()<CR>')
+vim.keymap.set('n','<F12>','<CMD>e<CR>')
 
 
 -- Toggle term
@@ -87,3 +88,14 @@ vim.keymap.set('n','<F1>','<CMD>ToggleTerm 1<CR>')
 vim.keymap.set('n','<F2>','<CMD>ToggleTerm 2<CR>')
 vim.keymap.set('n','<F3>','<CMD>ToggleTerm 3<CR>')
 vim.keymap.set('n','<F4>','<CMD>ToggleTerm 4<CR>')
+vim.keymap.set('t','<F9>','<CMD>ToggleTerm<CR>')
+
+-- HARD MODE
+--vim.keymap.set('n', 'v', function () print('nope'); end)
+--vim.keymap.set('n', 'vip', function () print('i said nope.'); end)
+--vim.keymap.set('n', 'V', function () print('try harder'); end)
+--vim.keymap.set('n', '<c-v>', function () print('still a no'); end)
+--vim.keymap.set('', '<up>', function () print('you can do it'); end)
+--vim.keymap.set('', '<down>', function () print('still in hard mode'); end)
+--vim.keymap.set('', '<left>', function () print('i believe in you'); end)
+--vim.keymap.set('', '<right>', function () print('you\'re doing great'); end)
